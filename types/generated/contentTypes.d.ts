@@ -546,7 +546,10 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    aprovacao_1: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    aprovacao_2: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     category: Schema.Attribute.String;
+    comentarios_revisao: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -561,6 +564,10 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'titulo'>;
+    status_aprovacao: Schema.Attribute.Enumeration<
+      ['Pendente', 'Em Revis\u00E3o', 'Aprovado', 'Rejeitado']
+    > &
+      Schema.Attribute.DefaultTo<'Pendente'>;
     thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     titulo: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

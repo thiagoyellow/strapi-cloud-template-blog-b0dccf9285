@@ -48,6 +48,27 @@
     },
     "category": {
       "type": "string"
+    },
+    "aprovacao_1": {
+      "type": "boolean",
+      "default": false
+    },
+    "aprovacao_2": {
+      "type": "boolean",
+      "default": false
+    },
+    "status_aprovacao": {
+      "type": "enumeration",
+      "enum": [
+        "Pendente",
+        "Em Revisão",
+        "Aprovado",
+        "Rejeitado"
+      ],
+      "default": "Pendente"
+    },
+    "comentarios_revisao": {
+      "type": "text"
     }
   }
 }
