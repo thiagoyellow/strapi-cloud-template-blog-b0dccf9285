@@ -129,3 +129,24 @@ dist
 build
 .strapi-updater.json
 .strapi-cloud.json
+
+############################
+# Migration files (cleanup)
+############################
+
+# WordPress export files  
+*.xml
+export-media-urls-*.csv
+posts_import_data.json
+relatorio-correlacoes.json
+exemplo-importacao-completa.json
+template-importacao-completa.json
+
+# Migration scripts directory
+scripts/
+data/
+
+# Temporary files
+MIGRATION-CLEANUP.md
+RELATORIO-FINAL.md
+COMO-PREENCHER-TEMPLATE.md

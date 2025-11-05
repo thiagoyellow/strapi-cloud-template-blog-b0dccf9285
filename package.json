@@ -2,17 +2,10 @@
   "name": "my-app-name",
   "version": "0.1.0",
   "private": true,
-  "description": "A Strapi application",
-  "scripts": {
+  "description": "A Strapi application",  "scripts": {
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
-    "seed:example": "node ./scripts/seed.js",    "import:wordpress:test": "node ./scripts/import-wordpress-posts.js",
-    "import:wordpress:full": "node ./scripts/import-wordpress-posts.js --full",    "images:reprocess": "node ./scripts/reprocess-images.js",
-    "images:reprocess:full": "node ./scripts/reprocess-images.js --full",
-    "images:upload-simple": "node ./scripts/simple-image-uploader.js",
-    "images:super-match": "node ./scripts/super-image-matcher.js",
-    "images:hybrid-match": "node ./scripts/hybrid-image-matcher.js",
     "start": "strapi start",
     "strapi": "strapi"
   },
@@ -23,6 +16,7 @@
     "axios": "^1.10.0",
     "better-sqlite3": "11.3.0",
     "csv-parser": "^3.2.0",
+    "form-data": "^4.0.4",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",
     "react": "^18.0.0",
